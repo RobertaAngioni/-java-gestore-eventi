@@ -68,7 +68,7 @@ public class Evento {
 	//metodi
 	
 	public void prenota() throws Exception{
-		if(!date.isBefore(LocalDate.now())) {
+		if(date.isBefore(LocalDate.now())) {
 			throw new Exception ("La data non è valida");
 		}else if (postiPrenotati == postiTotale) {
 			throw new Exception ("Non ci sono posti prenotabili");
